@@ -4,36 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".DashboardActivity">
 
     <Button
         android:id="@+id/btnSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Show All Employee"
-        />
+        android:text="Show All Employee" />
+
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Register Employee"
-        />
+        android:text="Register Employee" />
+
     <Button
         android:id="@+id/btnSearchEmpById"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Search Employee"
-        />
+        android:text="Search Employee" />
+
     <Button
         android:id="@+id/btnUpdateDelete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Update|Delete Employee"
-        />
+        android:text="Update|Delete Employee" />
 
 </LinearLayout>

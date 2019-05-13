@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import EmployeeAPI.EmployeeAPI;
@@ -28,10 +29,11 @@ public class UpdateDeleteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_delete);
 
-        etEmpName = findViewById(R.id.etName);
+        etEmpName = findViewById(R.id.etEmpName);
         etEmpID = findViewById(R.id.etEmpID);
         etEmpSalary = findViewById(R.id.etEmpSalary);
         etEmpAge = findViewById(R.id.etEmpAge);
+
         btnSearch = findViewById(R.id.btnSearch);
         btnUpdate = findViewById(R.id.btnUpdate);
         btnDelete = findViewById(R.id.btnDelete);
@@ -64,17 +66,20 @@ public class UpdateDeleteActivity extends AppCompatActivity {
                 .baseUrl(url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-
         employeeAPI = retrofit.create(EmployeeAPI.class);
+
+
     }
 
     private void loadData() {
         CreateInstance();
-        Call<Employee> listCall = employeeAPI.getEmployeeID(Integer.parseInt(etEmpID.getText().toString()));
 
-        listCall.enqueue(new Callback<Employee>() {
+        Call<Employee> listcall = employeeAPI.getEmployeeID(Integer.parseInt(etEmpID.getText().toString()));
+
+        listcall.enqueue(new Callback<Employee>() {
             @Override
             public void onResponse(Call<Employee> call, Response<Employee> response) {
+
                 etEmpName.setText(response.body().getEmployee_name());
                 etEmpAge.setText(Integer.toString(response.body().getEmployee_age()));
                 etEmpSalary.setText(Float.toString(response.body().getEmployee_salary()));

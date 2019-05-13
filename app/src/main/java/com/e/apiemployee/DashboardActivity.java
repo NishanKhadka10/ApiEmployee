@@ -8,13 +8,14 @@ import android.widget.Button;
 
 public class DashboardActivity extends AppCompatActivity {
 
-    private Button btnSearch,btnRegister,btnSearchEmpById,btnUpdateDelete;
+    private Button btnSearch, btnRegister, btnSearchEmpById, btnUpdateDelete;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        btnRegister= findViewById(R.id.btnRegister);
+        btnRegister = findViewById(R.id.btnRegister);
         btnSearch = findViewById(R.id.btnSearch);
         btnSearchEmpById = findViewById(R.id.btnSearchEmpById);
         btnUpdateDelete = findViewById(R.id.btnUpdateDelete);
@@ -22,7 +23,7 @@ public class DashboardActivity extends AppCompatActivity {
         btnUpdateDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this,UpdateDeleteActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, UpdateDeleteActivity.class);
                 startActivity(intent);
 
             }
@@ -31,7 +32,7 @@ public class DashboardActivity extends AppCompatActivity {
         btnSearchEmpById.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this,SearchEmployeeActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, SearchEmployeeActivity.class);
                 startActivity(intent);
 
             }
@@ -39,7 +40,7 @@ public class DashboardActivity extends AppCompatActivity {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this,MainActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, MainActivity.class);
                 startActivity(intent);
 
             }
@@ -47,7 +48,7 @@ public class DashboardActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this,RegisterEmployeeActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, RegisterEmployeeActivity.class);
                 startActivity(intent);
 
             }

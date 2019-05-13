@@ -7,12 +7,13 @@
     android:orientation="vertical"
     tools:context=".UpdateDeleteActivity">
 
+
     <EditText
         android:id="@+id/etEmpID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:hint="Enter Emp Id"/>
+        android:hint="Enter Emp Id" />
 
     <Button
         android:id="@+id/btnSearch"
@@ -21,26 +22,27 @@
         android:layout_margin="20dp"
         android:text="Search" />
 
+
     <EditText
         android:id="@+id/etEmpName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:hint="Name"/>
+        android:hint="Name" />
 
     <EditText
         android:id="@+id/etEmpAge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:hint="Age"/>
+        android:hint="Age" />
 
     <EditText
         android:id="@+id/etEmpSalary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:hint="Salary"/>
+        android:hint="Salary" />
 
     <Button
         android:id="@+id/btnUpdate"
@@ -55,5 +57,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="Delete" />
+
 
 </LinearLayout>

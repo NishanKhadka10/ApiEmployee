@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                     content += "Age:" + employee.getEmployee_age() + "\n";
                     content += "Salary:" + employee.getEmployee_salary() + "\n";
                     content += "Image:" + employee.getProfile_image() + "\n";
-                    content += "--------------------------"+"\n";
+                    content += "--------------------------" + "\n";
                     tvEmployeeData.append(content);
 
                 }
