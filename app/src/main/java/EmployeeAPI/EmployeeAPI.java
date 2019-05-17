@@ -14,14 +14,16 @@ import retrofit2.http.Path;
 
 public interface EmployeeAPI {
 
-    @GET("employees")
+    @GET("getEmployee")
     Call<List<Employee>> getAllEmployee();
+
+    @POST("employee")
+    Call<Void> registerEmployee(@Body EmployeeCUD emp);
+
+
 
     @GET("employee/{empID}")
     Call<Employee> getEmployeeID(@Path("empID") int empId);
-
-    @POST("create")
-    Call<Void> registerEmployee(@Body EmployeeCUD emp);
 
     @PUT("update/{empID}")
     Call<Void> updateEmployee(@Path("empID") int empId, @Body EmployeeCUD emp);

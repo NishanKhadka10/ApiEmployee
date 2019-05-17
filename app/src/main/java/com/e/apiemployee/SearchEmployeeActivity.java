@@ -17,7 +17,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SearchEmployeeActivity extends AppCompatActivity {
-    private final static String url = "http://dummy.restapiexample.com/api/v1/";
+    private final static String url = "localhost:8000/api/";
     private EditText etEmpNo;
     private TextView tvData;
     private Button btnSearch;

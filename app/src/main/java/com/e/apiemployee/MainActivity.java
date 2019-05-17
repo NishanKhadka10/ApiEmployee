@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         tvEmployeeData = findViewById(R.id.tvEmployeeData);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://dummy.restapiexample.com/api/v1/")
+                .baseUrl("http://10.0.2.2:7600/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 List<Employee> employeeList = response.body();
                 for (Employee employee : employeeList) {
                     String content = "";
-                    content += "ID:" + employee.getId() + "\n";
-                    content += "Name:" + employee.getEmployee_name() + "\n";
+                    content += "id:" + employee.getId() + "\n";
+                    content += "FullName:" + employee.getEmployee_name() + "\n";
                     content += "Age:" + employee.getEmployee_age() + "\n";
                     content += "Salary:" + employee.getEmployee_salary() + "\n";
-                    content += "Image:" + employee.getProfile_image() + "\n";
+                    content += "Emp_image:" + employee.getProfile_image() + "\n";
                     content += "--------------------------" + "\n";
                     tvEmployeeData.append(content);
 
